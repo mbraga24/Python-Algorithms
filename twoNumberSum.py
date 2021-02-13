@@ -1,3 +1,6 @@
+
+# O(n^2) TIME COMPLEXITY
+# O(1) SPACE COMPLEXITY
 def twoNumberSum(array, targetNum):
   for i in range(len(array) - 1):
     firstNum = array[i]
@@ -7,6 +10,8 @@ def twoNumberSum(array, targetNum):
         return [firstNum, secondNum]
   return []
 
+# O(n^2) TIME COMPLEXITY
+# O(n) SPACE COMPLEXITY
 def twoNumberSum(array, targetNum):
   nums = {}
   for num in array:
@@ -17,6 +22,8 @@ def twoNumberSum(array, targetNum):
       nums[num] = True
   return []
 
+# O(nlog(n)) TIME COMPLEXITY
+# O(1) SPACE COMPLEXITY
 def twoNumberSum(array, targetNum):
   array.sort()
   left = 0
