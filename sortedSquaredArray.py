@@ -19,6 +19,14 @@ def sortedSquaredArray(array):
   return sortedSquares
 '''
 
+# Time Complexity: O(n)
+#   We are performing a linear iteration in the given array from the largest value to the smallest value.
+#   We iterate linearly while also sorting and assigning the squared values from the largest to the 
+#   smallest value in the new sortedSquares array.
+
+# Space Complexity: O(n)
+  # We're still creating a new array to store the squared values.
+
 def sortedSquaredArray(array):
   sortedSquares = [0 for _ in array]
   leftPointer = 0
