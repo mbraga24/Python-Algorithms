@@ -9,28 +9,33 @@
 
 '''
 def sortedSquaredArray(array): 
-  sortedSquared = [0 for _ in array]
+  sortedSquares = [0 for _ in array]
 
   for idx in range(len(array)):
     value = array[idx]
-    sortedSquared[idx] = value * value
+    sortedSquares[idx] = value * value
 
-  sortedSquared.sort()
-  return sortedSquared
+  sortedSquares.sort()
+  return sortedSquares
 '''
 
 def sortedSquaredArray(array):
-  sortedSquared = [0 for _ in array]
+  sortedSquares = [0 for _ in array]
   leftPointer = 0
   rightPointer = len(array) - 1
 
   for idx in reversed(range(len(array))):
-    smallestValue = array[leftPointer]
-    highestValue = array[rightPointer]
+    smallerValue = array[leftPointer]
+    largerValue = array[rightPointer]
 
-    if abs(smallestValue) > abs(highestValue):
-      sortedSquared
+    if abs(smallerValue) > abs(largerValue):
+      sortedSquares[idx] = smallerValue * smallerValue
+      leftPointer += 1
+    else:
+      sortedSquares[idx] = largerValue * largerValue
+      rightPointer -= 1
 
+  return sortedSquares
 
 print(sortedSquaredArray([1, 2, 3, 5, 6, 8, 9]))
 print(sortedSquaredArray([-3, -2, 0, 5, 6, 8, 9]))
