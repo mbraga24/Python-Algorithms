@@ -19,6 +19,8 @@ def sortedSquaredArray(array):
   return sortedSquares
 '''
 
+# Solution 2:
+
 # Time Complexity: O(n)
 #   We are performing a linear iteration in the given array from the largest value to the smallest value.
 #   We iterate linearly while also sorting and assigning the squared values from the largest to the 
