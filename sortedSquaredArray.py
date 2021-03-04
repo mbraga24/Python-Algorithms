@@ -7,6 +7,7 @@
 # Space Complexity: O(n)
   # The space complexity is O(n) because we are creating a new array to store the sorted squared values.
 
+'''
 def sortedSquaredArray(array): 
   sortedSquared = [0 for _ in array]
 
@@ -16,7 +17,19 @@ def sortedSquaredArray(array):
 
   sortedSquared.sort()
   return sortedSquared
+'''
 
+def sortedSquaredArray(array):
+  sortedSquared = [0 for _ in array]
+  leftPointer = 0
+  rightPointer = len(array) - 1
+
+  for idx in reversed(range(len(array))):
+    smallestValue = array[leftPointer]
+    highestValue = array[rightPointer]
+
+    if abs(smallestValue) > abs(highestValue):
+      sortedSquared
 
 
 print(sortedSquaredArray([1, 2, 3, 5, 6, 8, 9]))
