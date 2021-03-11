@@ -1,3 +1,26 @@
+# /////////////////////////////////
+        # AVERAGE CASE:
+# /////////////////////////////////
+# Time Complexity: O(log(n))
+#   The same reason most methods in a BST are O(log(n)) because we will be eliminating on average 
+#   half the tree every time we explore a node. 
+# Space Complexity: O(log(n))
+  # If we implement this algorithm recursively we will be calling the helper function multiple times
+  # as we look into each value. That means we will be adding multiple frames on the call stack and 
+  # using up extra memory.
+
+
+
+# WORST CASE:
+  # Time Complexity: O(n)
+  #   The reason why it's O(n) is because if we have a tree that has one branch, we can't really
+  #   take advantage of the BST property because we never really eliminate part of the tree.
+  #   For example:
+  #     Given the target: 40
+  #     Given the tree: 10 -> 13 -> 18 -> 22 -> 35 -> 45
+  #   The worst case scenario is that we will go down the entire tree and never eliminate half the tree.
+
+  # Space Complexity:
 # def findClosestValueInBst(tree, target):
 #   return findClosestValueInBstHelper(tree, target, tree.value)
 
@@ -12,25 +35,6 @@
 #     return findClosestValueInBstHelper(tree.right, target, closest)
 #   else:
 #     return closest
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 def findClosestValueInBst(tree, target):
   currentNode = tree
